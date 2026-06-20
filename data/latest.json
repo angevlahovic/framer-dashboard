@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "scraped_at": "2026-06-20T06:00:00Z",
+    "duration_seconds": 0,
+    "total_found": 0,
+    "total_scraped": 0,
+    "note": "Run 'python scraper/scrape.py' to populate real data"
+  },
+  "templates": []
+}
