@@ -1,1113 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Framer Community — Marketplace Intelligence</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framer Marketplace Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
   :root {
-    --bg: #0a0a0b;
-    --surface: #111113;
-    --surface2: #18181c;
-    --border: #222228;
-    --accent: #6366f1;
-    --accent2: #a78bfa;
-    --accent3: #34d399;
-    --accent4: #f59e0b;
-    --accent5: #f472b6;
-    --text: #f4f4f5;
-    --muted: #71717a;
-    --muted2: #3f3f46;
-    --free: #34d399;
-    --paid: #6366f1;
-    --font: "Inter", system-ui, -apple-system, sans-serif;
-    --mono: "JetBrains Mono", "Fira Code", monospace;
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --border: #222;
+    --accent: #6b5cf6;
+    --accent2: #06b6d4;
+    --text: #f0f0f0;
+    --muted: #666;
+    --green: #22c55e;
+    --orange: #f97316;
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    line-height: 1.5;
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; min-height: 100vh; }
+  header { padding: 28px 32px 0; display: flex; align-items: center; justify-content: space-between; }
+  header h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
+  header h1 span { color: var(--accent); }
+  #last-updated { font-size: 12px; color: var(--muted); }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; padding: 24px 32px 0; }
+  .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .kpi-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+  .kpi-value { font-size: 28px; font-weight: 700; letter-spacing: -1px; }
+  .kpi-value.accent { color: var(--accent); }
+  .kpi-value.green { color: var(--green); }
+  .kpi-value.cyan { color: var(--accent2); }
+  .kpi-value.orange { color: var(--orange); }
+  .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px 32px 0; }
+  .charts-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+  .chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .chart-box.full { grid-column: 1 / -1; }
+  .chart-title { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 16px; }
+  .chart-wrap { position: relative; height: 220px; }
+  .chart-wrap.tall { height: 280px; }
+  .table-section { padding: 16px 32px 32px; }
+  .table-controls { display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; align-items: center; }
+  .table-controls input, .table-controls select {
+    background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    border-radius: 8px; padding: 8px 12px; font-size: 13px; outline: none;
   }
-
-  /* ─── FONTS ─── */
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
-  /* ─── LAYOUT ─── */
-  .app { max-width: 1400px; margin: 0 auto; padding: 0 24px 80px; }
-
-  header {
-    padding: 40px 0 32px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 40px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .logo-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .logo-dot {
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 16px var(--accent);
-  }
-
-  h1 {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: var(--text);
-  }
-
-  h1 span {
-    color: var(--muted);
-    font-weight: 400;
-  }
-
-  .header-meta {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .scrape-time {
-    font-size: 12px;
-    font-family: var(--mono);
-    color: var(--muted);
-  }
-
-  .status-pill {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(52, 211, 153, 0.08);
-    border: 1px solid rgba(52, 211, 153, 0.2);
-    color: var(--free);
-    font-size: 11px;
-    font-weight: 500;
-    padding: 4px 10px;
-    border-radius: 20px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .status-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--free);
-    animation: pulse 2s ease infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-
-  /* ─── KPI ROW ─── */
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 32px;
-  }
-
-  .kpi {
-    background: var(--surface);
-    padding: 24px 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .kpi::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--kpi-color, var(--accent));
-    opacity: 0.6;
-  }
-
-  .kpi-label {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
-
-  .kpi-value {
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1;
-    color: var(--text);
-    margin-bottom: 6px;
-    font-family: var(--mono);
-  }
-
-  .kpi-sub {
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .kpi-sub .up { color: var(--free); }
-  .kpi-sub .down { color: #f87171; }
-
-  /* ─── SECTION TITLES ─── */
-  .section-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
-  .section-title {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .section-badge {
-    font-size: 11px;
-    font-family: var(--mono);
-    color: var(--muted);
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    padding: 2px 8px;
-    border-radius: 4px;
-  }
-
-  /* ─── CHART GRID ─── */
-  .charts-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .charts-grid-3 {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
-  }
-
-  .chart-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-  }
-
-  .chart-card canvas {
-    max-height: 220px;
-  }
-
-  .chart-card.tall canvas {
-    max-height: 300px;
-  }
-
-  /* ─── TABLE ─── */
-  .table-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 16px;
-  }
-
-  .table-header {
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .table-controls {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .filter-input {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 12px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    outline: none;
-    width: 200px;
-  }
-
-  .filter-input:focus {
-    border-color: var(--accent);
-  }
-
-  .filter-select {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    outline: none;
-    cursor: pointer;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-  }
-
-  thead th {
-    text-align: left;
-    padding: 10px 16px;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface2);
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-  }
-
-  thead th:hover { color: var(--text); }
-  thead th.sorted { color: var(--accent); }
-
-  tbody tr {
-    border-bottom: 1px solid var(--border);
-    transition: background 0.1s;
-  }
-
-  tbody tr:last-child { border-bottom: none; }
-  tbody tr:hover { background: var(--surface2); }
-
-  td {
-    padding: 11px 16px;
-    vertical-align: middle;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 240px;
-  }
-
-  .td-name {
-    font-weight: 500;
-    color: var(--text);
-  }
-
-  .td-name a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .td-name a:hover { color: var(--accent2); }
-
-  .td-creator { color: var(--muted); font-size: 12px; }
-
-  .price-badge {
-    display: inline-block;
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 4px;
-  }
-
-  .price-free {
-    background: rgba(52, 211, 153, 0.1);
-    color: var(--free);
-    border: 1px solid rgba(52, 211, 153, 0.2);
-  }
-
-  .price-paid {
-    background: rgba(99, 102, 241, 0.1);
-    color: var(--accent2);
-    border: 1px solid rgba(99, 102, 241, 0.2);
-  }
-
-  .stat-num {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .cat-pill {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 500;
-    padding: 2px 7px;
-    border-radius: 3px;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--muted);
-    margin: 1px;
-  }
-
-  /* ─── CREATOR LEADERBOARD ─── */
-  .leaderboard {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .lb-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border-radius: 6px;
-    transition: background 0.1s;
-  }
-
-  .lb-row:hover { background: var(--surface2); }
-
-  .lb-rank {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted);
-    width: 20px;
-    text-align: right;
-    flex-shrink: 0;
-  }
-
-  .lb-name {
-    flex: 1;
-    font-size: 13px;
-    font-weight: 500;
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .lb-count {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--muted);
-    flex-shrink: 0;
-  }
-
-  .lb-bar-wrap {
-    width: 60px;
-    height: 4px;
-    background: var(--border);
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-
-  .lb-bar {
-    height: 100%;
-    border-radius: 2px;
-    background: var(--accent);
-  }
-
-  /* ─── HISTORY TREND ─── */
-  .trend-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 16px;
-  }
-
-  .trend-card canvas {
-    max-height: 160px;
-  }
-
-  /* ─── PAGINATION ─── */
-  .pagination {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  .page-btns {
-    display: flex;
-    gap: 4px;
-  }
-
-  .page-btn {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    color: var(--text);
-    font-size: 12px;
-    font-family: var(--font);
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border-color 0.1s;
-  }
-
-  .page-btn:hover { border-color: var(--accent); }
-  .page-btn.active { border-color: var(--accent); color: var(--accent); }
-  .page-btn:disabled { opacity: 0.3; cursor: default; }
-
-  /* ─── LOADING ─── */
-  .loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 60vh;
-    gap: 16px;
-    color: var(--muted);
-  }
-
-  .spinner {
-    width: 32px; height: 32px;
-    border: 2px solid var(--border);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-  }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  .error-msg {
-    background: rgba(248, 113, 113, 0.08);
-    border: 1px solid rgba(248, 113, 113, 0.2);
-    color: #f87171;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 40px 0;
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 900px) {
-    .charts-grid, .charts-grid-3 { grid-template-columns: 1fr; }
-  }
-
-  @media (max-width: 600px) {
-    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-    header { padding: 24px 0 20px; }
-  }
+  .table-controls input { flex: 1; min-width: 200px; }
+  .table-controls input:focus, .table-controls select:focus { border-color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 10px 12px; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); cursor: pointer; user-select: none; }
+  th:hover { color: var(--text); }
+  td { padding: 11px 12px; border-bottom: 1px solid #1a1a1a; vertical-align: middle; }
+  tr:hover td { background: #161616; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+  .badge-free { background: rgba(34,197,94,0.12); color: var(--green); }
+  .badge-paid { background: rgba(107,92,246,0.12); color: var(--accent); }
+  .template-link { color: var(--text); text-decoration: none; font-weight: 500; }
+  .template-link:hover { color: var(--accent); }
+  .creator-tag { font-size: 11px; color: var(--muted); }
+  .pagination { display: flex; gap: 8px; align-items: center; justify-content: center; padding: 20px 0 0; }
+  .pagination button { background: var(--surface); border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 6px 14px; cursor: pointer; font-size: 13px; }
+  .pagination button:hover, .pagination button.active { background: var(--accent); border-color: var(--accent); }
+  .pagination button:disabled { opacity: 0.3; cursor: default; }
+  #page-info { font-size: 13px; color: var(--muted); }
+  .error-box { text-align: center; padding: 80px 32px; }
+  .error-box h2 { font-size: 18px; margin-bottom: 8px; color: var(--muted); }
+  .error-box p { color: var(--muted); font-size: 13px; }
+  #loading { text-align: center; padding: 100px; color: var(--muted); font-size: 14px; }
+  .stat-num { font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body>
-<div class="app" id="app">
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-    <div>Loading marketplace data…</div>
+
+<div id="loading">Loading dashboard data...</div>
+<div id="app" style="display:none">
+  <header>
+    <h1>Framer <span>Marketplace</span> Dashboard</h1>
+    <span id="last-updated"></span>
+  </header>
+
+  <div class="kpi-grid">
+    <div class="kpi"><div class="kpi-label">Total Templates</div><div class="kpi-value accent" id="kpi-total">—</div></div>
+    <div class="kpi"><div class="kpi-label">Free</div><div class="kpi-value green" id="kpi-free">—</div></div>
+    <div class="kpi"><div class="kpi-label">Paid</div><div class="kpi-value" id="kpi-paid">—</div></div>
+    <div class="kpi"><div class="kpi-label">Avg Price (paid)</div><div class="kpi-value orange" id="kpi-avgprice">—</div></div>
+    <div class="kpi"><div class="kpi-label">Total Likes</div><div class="kpi-value cyan" id="kpi-likes">—</div></div>
+    <div class="kpi"><div class="kpi-label">Total Views</div><div class="kpi-value" id="kpi-views">—</div></div>
+  </div>
+
+  <div class="charts-grid three">
+    <div class="chart-box">
+      <div class="chart-title">Free vs Paid</div>
+      <div class="chart-wrap"><canvas id="chart-freepaid"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Top Categories</div>
+      <div class="chart-wrap"><canvas id="chart-categories"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Price Distribution</div>
+      <div class="chart-wrap"><canvas id="chart-prices"></canvas></div>
+    </div>
+  </div>
+
+  <div class="charts-grid">
+    <div class="chart-box">
+      <div class="chart-title">Top Templates by Likes</div>
+      <div class="chart-wrap tall"><canvas id="chart-toplikes"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">Growth Over Time</div>
+      <div class="chart-wrap tall"><canvas id="chart-growth"></canvas></div>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <div class="table-controls">
+      <input type="text" id="search" placeholder="Search templates, creators...">
+      <select id="filter-price">
+        <option value="all">All Prices</option>
+        <option value="free">Free Only</option>
+        <option value="paid">Paid Only</option>
+      </select>
+      <select id="sort-by">
+        <option value="likes">Sort: Likes</option>
+        <option value="views">Sort: Views</option>
+        <option value="name">Sort: Name</option>
+        <option value="price">Sort: Price</option>
+        <option value="comments">Sort: Comments</option>
+      </select>
+      <span id="result-count" style="font-size:13px;color:var(--muted)"></span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Template</th>
+          <th>Creator</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>❤ Likes</th>
+          <th>👁 Views</th>
+          <th>💬</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+    <div class="pagination">
+      <button id="btn-prev" onclick="changePage(-1)">← Prev</button>
+      <span id="page-info"></span>
+      <button id="btn-next" onclick="changePage(1)">Next →</button>
+    </div>
   </div>
 </div>
 
+<div id="error-div" style="display:none" class="error-box">
+  <h2>Could not load data</h2>
+  <p>The scraper hasn't run yet or data is not available.</p>
+</div>
+
 <script>
-// ─── CONFIG ───────────────────────────────────────────────────────────────────
-// Update this path if your data files are served from a different location
-const DATA_URL = "./data/latest.json";
-const HISTORY_URL = "./data/history.json";
+// ── CONFIG ──────────────────────────────────────────────
+// Reads from your GitHub repo's raw data file
+// Replace YOUR_USERNAME and YOUR_REPO if different
+const GITHUB_USER = "angevlahovic";
+const GITHUB_REPO = "framer-dashboard";
+const DATA_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/data/latest.json`;
+const HISTORY_URL = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/data/history.json`;
+// ────────────────────────────────────────────────────────
 
-const PAGE_SIZE = 50;
-
-// ─── STATE ────────────────────────────────────────────────────────────────────
 let allTemplates = [];
-let filteredTemplates = [];
+let filtered = [];
 let currentPage = 1;
-let sortKey = "likes";
-let sortDir = -1;
-let filterQuery = "";
-let filterType = "all";
-let filterCategory = "all";
-let historyData = [];
+const PER_PAGE = 50;
 
-// ─── CHARTS ───────────────────────────────────────────────────────────────────
 const CHART_DEFAULTS = {
-  responsive: true,
-  maintainAspectRatio: true,
-  plugins: {
-    legend: {
-      labels: { color: "#71717a", font: { family: "Inter", size: 11 }, boxWidth: 10 }
-    },
-    tooltip: {
-      backgroundColor: "#18181c",
-      borderColor: "#222228",
-      borderWidth: 1,
-      titleColor: "#f4f4f5",
-      bodyColor: "#a1a1aa",
-      titleFont: { family: "Inter", weight: "600" },
-      bodyFont: { family: "JetBrains Mono" },
-    }
-  },
-  scales: {
-    x: {
-      ticks: { color: "#52525b", font: { family: "Inter", size: 10 } },
-      grid: { color: "#18181c" },
-    },
-    y: {
-      ticks: { color: "#52525b", font: { family: "JetBrains Mono", size: 10 } },
-      grid: { color: "#222228" },
-    }
-  }
+  color: '#f0f0f0',
+  plugins: { legend: { labels: { color: '#888', font: { size: 11 } } } },
+  scales: {}
 };
 
-function chartColor(alpha = 1, idx = 0) {
-  const colors = [
-    `rgba(99, 102, 241, ${alpha})`,
-    `rgba(167, 139, 250, ${alpha})`,
-    `rgba(52, 211, 153, ${alpha})`,
-    `rgba(245, 158, 11, ${alpha})`,
-    `rgba(244, 114, 182, ${alpha})`,
-    `rgba(251, 146, 60, ${alpha})`,
-    `rgba(56, 189, 248, ${alpha})`,
-    `rgba(163, 230, 53, ${alpha})`,
-  ];
-  return colors[idx % colors.length];
+function darkScales() {
+  return {
+    x: { ticks: { color: '#666', font: { size: 10 } }, grid: { color: '#1e1e1e' } },
+    y: { ticks: { color: '#666', font: { size: 10 } }, grid: { color: '#1e1e1e' } }
+  };
 }
 
-// ─── DATA LOADING ─────────────────────────────────────────────────────────────
-async function loadData() {
-  const [latestRes, historyRes] = await Promise.allSettled([
-    fetch(DATA_URL),
-    fetch(HISTORY_URL),
-  ]);
-
-  let latest = null;
-  if (latestRes.status === "fulfilled" && latestRes.value.ok) {
-    latest = await latestRes.value.json();
-  }
-
-  if (historyRes.status === "fulfilled" && historyRes.value.ok) {
-    historyData = await historyRes.value.json();
-  }
-
-  return latest;
-}
-
-// ─── COMPUTED STATS ───────────────────────────────────────────────────────────
-function computeStats(templates) {
-  const paid = templates.filter(t => t.price > 0);
-  const free = templates.filter(t => t.is_free);
-  const prices = paid.map(t => t.price).filter(Boolean);
-  const avgPrice = prices.length ? prices.reduce((a, b) => a + b, 0) / prices.length : 0;
-  const maxPrice = prices.length ? Math.max(...prices) : 0;
-  const totalViews = templates.reduce((a, t) => a + (t.views || 0), 0);
-  const totalLikes = templates.reduce((a, t) => a + (t.likes || 0), 0);
-
-  // Category breakdown
-  const catCounts = {};
-  templates.forEach(t => {
-    (t.categories || []).slice(0, 2).forEach(c => {
-      catCounts[c] = (catCounts[c] || 0) + 1;
-    });
-  });
-
-  // Creator leaderboard
-  const creatorStats = {};
-  templates.forEach(t => {
-    if (!t.creator) return;
-    if (!creatorStats[t.creator]) creatorStats[t.creator] = { count: 0, likes: 0, views: 0, free: 0 };
-    creatorStats[t.creator].count++;
-    creatorStats[t.creator].likes += (t.likes || 0);
-    creatorStats[t.creator].views += (t.views || 0);
-    if (t.is_free) creatorStats[t.creator].free++;
-  });
-
-  const topCreators = Object.entries(creatorStats)
-    .sort(([, a], [, b]) => b.count - a.count)
-    .slice(0, 15);
-
-  // Price distribution buckets
-  const priceBuckets = { Free: free.length, "$1–$49": 0, "$50–$99": 0, "$100–$149": 0, "$150+": 0 };
-  paid.forEach(t => {
-    if (t.price < 50) priceBuckets["$1–$49"]++;
-    else if (t.price < 100) priceBuckets["$50–$99"]++;
-    else if (t.price < 150) priceBuckets["$100–$149"]++;
-    else priceBuckets["$150+"]++;
-  });
-
-  // Feature popularity
-  const featureCounts = {};
-  templates.forEach(t => {
-    (t.features || []).forEach(f => {
-      featureCounts[f] = (featureCounts[f] || 0) + 1;
-    });
-  });
-  const topFeatures = Object.entries(featureCounts)
-    .sort(([, a], [, b]) => b - a)
-    .slice(0, 10);
-
-  // All unique categories
-  const allCats = Object.keys(catCounts).sort((a, b) => catCounts[b] - catCounts[a]);
-
-  return { paid, free, avgPrice, maxPrice, totalViews, totalLikes, catCounts, topCreators, priceBuckets, topFeatures, allCats };
-}
-
-// ─── FILTERING & SORTING ──────────────────────────────────────────────────────
-function applyFilters() {
-  let out = [...allTemplates];
-
-  if (filterQuery) {
-    const q = filterQuery.toLowerCase();
-    out = out.filter(t =>
-      (t.name || "").toLowerCase().includes(q) ||
-      (t.creator || "").toLowerCase().includes(q)
-    );
-  }
-
-  if (filterType === "free") out = out.filter(t => t.is_free);
-  if (filterType === "paid") out = out.filter(t => !t.is_free);
-
-  if (filterCategory !== "all") {
-    out = out.filter(t => (t.categories || []).some(c => c.toLowerCase() === filterCategory.toLowerCase()));
-  }
-
-  out.sort((a, b) => {
-    const av = a[sortKey] ?? (typeof a[sortKey] === "number" ? 0 : "");
-    const bv = b[sortKey] ?? (typeof b[sortKey] === "number" ? 0 : "");
-    if (typeof av === "number") return (av - bv) * sortDir;
-    return String(av).localeCompare(String(bv)) * sortDir;
-  });
-
-  filteredTemplates = out;
-  currentPage = 1;
-}
-
-// ─── RENDER ───────────────────────────────────────────────────────────────────
-function fmt(n) {
-  if (n >= 1000000) return (n / 1000000).toFixed(1) + "M";
-  if (n >= 1000) return (n / 1000).toFixed(1) + "K";
-  return n.toLocaleString();
-}
-
-function renderKPIs(stats, meta, templates) {
-  const hist = historyData;
-  const prev = hist.length > 1 ? hist[hist.length - 2] : null;
-  const deltaTotal = prev ? templates.length - prev.total : 0;
-
-  return `
-  <div class="kpi-grid">
-    <div class="kpi" style="--kpi-color: ${chartColor(1, 0)}">
-      <div class="kpi-label">Total Templates</div>
-      <div class="kpi-value">${fmt(templates.length)}</div>
-      <div class="kpi-sub">${deltaTotal >= 0 ? `<span class="up">+${deltaTotal}</span>` : `<span class="down">${deltaTotal}</span>`} since yesterday</div>
-    </div>
-    <div class="kpi" style="--kpi-color: ${chartColor(1, 2)}">
-      <div class="kpi-label">Free Templates</div>
-      <div class="kpi-value">${fmt(stats.free.length)}</div>
-      <div class="kpi-sub">${Math.round(stats.free.length / templates.length * 100)}% of marketplace</div>
-    </div>
-    <div class="kpi" style="--kpi-color: ${chartColor(1, 1)}">
-      <div class="kpi-label">Paid Templates</div>
-      <div class="kpi-value">${fmt(stats.paid.length)}</div>
-      <div class="kpi-sub">Avg <span style="color:var(--accent2)">$${stats.avgPrice.toFixed(0)}</span> · Max $${stats.maxPrice}</div>
-    </div>
-    <div class="kpi" style="--kpi-color: ${chartColor(1, 3)}">
-      <div class="kpi-label">Total Views</div>
-      <div class="kpi-value">${fmt(stats.totalViews)}</div>
-      <div class="kpi-sub">across all templates</div>
-    </div>
-    <div class="kpi" style="--kpi-color: ${chartColor(1, 4)}">
-      <div class="kpi-label">Total Likes</div>
-      <div class="kpi-value">${fmt(stats.totalLikes)}</div>
-      <div class="kpi-sub">community engagement</div>
-    </div>
-    <div class="kpi" style="--kpi-color: ${chartColor(1, 5)}">
-      <div class="kpi-label">Categories</div>
-      <div class="kpi-value">${stats.allCats.length}</div>
-      <div class="kpi-sub">${stats.topCreators.length} active creators</div>
-    </div>
-  </div>`;
-}
-
-function renderHistoryChart() {
-  if (historyData.length < 2) return "";
-  return `
-  <div class="trend-card">
-    <div class="section-header">
-      <div class="section-title">Growth Over Time</div>
-      <div class="section-badge">${historyData.length} days tracked</div>
-    </div>
-    <canvas id="historyChart"></canvas>
-  </div>`;
-}
-
-function renderCharts(stats) {
-  return `
-  <div class="charts-grid-3">
-    <div class="chart-card tall">
-      <div class="section-header">
-        <div class="section-title">Top Categories</div>
-        <div class="section-badge">by templates</div>
-      </div>
-      <canvas id="catChart"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="section-header">
-        <div class="section-title">Price Distribution</div>
-      </div>
-      <canvas id="priceChart"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="section-header">
-        <div class="section-title">Top Features</div>
-      </div>
-      <canvas id="featureChart"></canvas>
-    </div>
-  </div>
-  <div class="charts-grid">
-    <div class="chart-card">
-      <div class="section-header">
-        <div class="section-title">Free vs Paid</div>
-      </div>
-      <canvas id="freeVsPaidChart"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="section-header">
-        <div class="section-title">Creator Leaderboard</div>
-        <div class="section-badge">by template count</div>
-      </div>
-      <div class="leaderboard" id="leaderboard"></div>
-    </div>
-  </div>`;
-}
-
-function renderTable(cats) {
-  const start = (currentPage - 1) * PAGE_SIZE;
-  const page = filteredTemplates.slice(start, start + PAGE_SIZE);
-  const totalPages = Math.ceil(filteredTemplates.length / PAGE_SIZE);
-
-  const catOptions = ["all", ...cats.slice(0, 20)].map(c =>
-    `<option value="${c}" ${filterCategory === c ? "selected" : ""}>${c === "all" ? "All categories" : c}</option>`
-  ).join("");
-
-  const cols = [
-    { key: "name", label: "Template" },
-    { key: "price", label: "Price" },
-    { key: "creator", label: "Creator" },
-    { key: "views", label: "Views" },
-    { key: "likes", label: "Likes" },
-    { key: "published", label: "Published" },
-    { key: "categories", label: "Categories" },
-  ];
-
-  const headers = cols.map(c => {
-    const isSorted = sortKey === c.key;
-    const arrow = isSorted ? (sortDir === -1 ? " ↓" : " ↑") : "";
-    return `<th class="${isSorted ? "sorted" : ""}" onclick="setSort('${c.key}')">${c.label}${arrow}</th>`;
-  }).join("");
-
-  const rows = page.map(t => {
-    const priceEl = t.is_free
-      ? `<span class="price-badge price-free">Free</span>`
-      : t.price != null
-        ? `<span class="price-badge price-paid">$${t.price}</span>`
-        : `<span class="price-badge" style="color:var(--muted)">—</span>`;
-    const cats = (t.categories || []).slice(0, 2).map(c => `<span class="cat-pill">${c}</span>`).join("");
-    return `
-    <tr>
-      <td class="td-name"><a href="https://framer.com/community/marketplace/templates/${t.slug}/" target="_blank" rel="noopener">${t.name || t.slug}</a></td>
-      <td>${priceEl}</td>
-      <td class="td-creator">${t.creator || "—"}</td>
-      <td class="stat-num">${t.views ? fmt(t.views) : "—"}</td>
-      <td class="stat-num">${t.likes ? fmt(t.likes) : "—"}</td>
-      <td class="stat-num" style="color:var(--muted);font-size:11px">${t.published || "—"}</td>
-      <td>${cats}</td>
-    </tr>`;
-  }).join("");
-
-  const pageButtons = [];
-  if (totalPages > 1) {
-    for (let p = Math.max(1, currentPage - 2); p <= Math.min(totalPages, currentPage + 2); p++) {
-      pageButtons.push(`<button class="page-btn ${p === currentPage ? "active" : ""}" onclick="goToPage(${p})">${p}</button>`);
-    }
-  }
-
-  return `
-  <div class="table-card">
-    <div class="table-header">
-      <div class="section-title">All Templates <span style="font-weight:400;margin-left:6px;color:var(--muted)">${filteredTemplates.length.toLocaleString()}</span></div>
-      <div class="table-controls">
-        <input class="filter-input" type="text" placeholder="Search name or creator…" value="${filterQuery}" oninput="setQuery(this.value)" />
-        <select class="filter-select" onchange="setType(this.value)">
-          <option value="all" ${filterType === "all" ? "selected" : ""}>All types</option>
-          <option value="free" ${filterType === "free" ? "selected" : ""}>Free only</option>
-          <option value="paid" ${filterType === "paid" ? "selected" : ""}>Paid only</option>
-        </select>
-        <select class="filter-select" onchange="setCategory(this.value)">${catOptions}</select>
-      </div>
-    </div>
-    <div style="overflow-x:auto">
-      <table>
-        <thead><tr>${headers}</tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>
-    ${totalPages > 1 ? `
-    <div class="pagination">
-      <span>Showing ${start + 1}–${Math.min(start + PAGE_SIZE, filteredTemplates.length)} of ${filteredTemplates.length}</span>
-      <div class="page-btns">
-        <button class="page-btn" onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? "disabled" : ""}>←</button>
-        ${pageButtons.join("")}
-        <button class="page-btn" onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? "disabled" : ""}>→</button>
-      </div>
-    </div>` : ""}
-  </div>`;
-}
-
-function renderApp(latest) {
-  const templates = latest.templates || [];
-  const meta = latest.meta || {};
-  allTemplates = templates;
-  const stats = computeStats(templates);
-
-  const scrapedAt = meta.scraped_at
-    ? new Date(meta.scraped_at).toLocaleString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })
-    : "Unknown";
-
-  const html = `
-  <header>
-    <div class="logo-row">
-      <div class="logo-dot"></div>
-      <h1>Framer Community <span>/ Marketplace Intelligence</span></h1>
-    </div>
-    <div class="header-meta">
-      <span class="scrape-time">Last scraped: ${scrapedAt}</span>
-      <span class="status-pill"><span class="status-dot"></span> Live</span>
-    </div>
-  </header>
-
-  ${renderKPIs(stats, meta, templates)}
-  ${renderHistoryChart()}
-  ${renderCharts(stats)}
-  <div id="table-section">${renderTable(stats.allCats)}</div>
-  `;
-
-  document.getElementById("app").innerHTML = html;
-
-  // Mount charts
-  initCharts(stats);
-}
-
-function rerenderTable(stats) {
-  document.getElementById("table-section").innerHTML = renderTable(stats.allCats);
-}
-
-// ─── CHART INIT ───────────────────────────────────────────────────────────────
-function initCharts(stats) {
-  Chart.defaults.color = "#71717a";
-  Chart.defaults.borderColor = "#222228";
-  Chart.defaults.font.family = "Inter";
-
-  // Category bar chart
-  const catEntries = Object.entries(stats.catCounts).sort(([,a],[,b]) => b - a).slice(0, 12);
-  new Chart(document.getElementById("catChart"), {
-    type: "bar",
-    data: {
-      labels: catEntries.map(([k]) => k),
-      datasets: [{
-        label: "Templates",
-        data: catEntries.map(([,v]) => v),
-        backgroundColor: catEntries.map((_, i) => chartColor(0.75, i % 8)),
-        borderRadius: 4,
-      }]
-    },
-    options: {
-      ...CHART_DEFAULTS,
-      indexAxis: "y",
-      plugins: { ...CHART_DEFAULTS.plugins, legend: { display: false } },
-      scales: {
-        x: { ...CHART_DEFAULTS.scales.x, grid: { color: "#222228" } },
-        y: { ...CHART_DEFAULTS.scales.y, grid: { display: false }, ticks: { color: "#a1a1aa", font: { size: 11 } } }
-      }
-    }
-  });
-
-  // Price distribution doughnut
-  const priceKeys = Object.keys(stats.priceBuckets);
-  const priceVals = Object.values(stats.priceBuckets);
-  new Chart(document.getElementById("priceChart"), {
-    type: "doughnut",
-    data: {
-      labels: priceKeys,
-      datasets: [{
-        data: priceVals,
-        backgroundColor: [chartColor(0.8, 2), chartColor(0.8, 0), chartColor(0.8, 1), chartColor(0.8, 3), chartColor(0.8, 4)],
-        borderColor: "#0a0a0b",
-        borderWidth: 2,
-      }]
-    },
-    options: {
-      ...CHART_DEFAULTS,
-      cutout: "60%",
-      plugins: {
-        ...CHART_DEFAULTS.plugins,
-        legend: { position: "bottom", labels: { color: "#a1a1aa", font: { size: 10 }, boxWidth: 10 } }
-      },
-      scales: {}
-    }
-  });
-
-  // Feature horizontal bar
-  new Chart(document.getElementById("featureChart"), {
-    type: "bar",
-    data: {
-      labels: stats.topFeatures.map(([k]) => k),
-      datasets: [{
-        label: "Count",
-        data: stats.topFeatures.map(([,v]) => v),
-        backgroundColor: chartColor(0.7, 4),
-        borderRadius: 3,
-      }]
-    },
-    options: {
-      ...CHART_DEFAULTS,
-      indexAxis: "y",
-      plugins: { ...CHART_DEFAULTS.plugins, legend: { display: false } },
-      scales: {
-        x: { ...CHART_DEFAULTS.scales.x },
-        y: { ...CHART_DEFAULTS.scales.y, grid: { display: false }, ticks: { font: { size: 10 }, color: "#a1a1aa" } }
-      }
-    }
-  });
-
-  // Free vs Paid bar
-  new Chart(document.getElementById("freeVsPaidChart"), {
-    type: "bar",
-    data: {
-      labels: ["Free", "Paid"],
-      datasets: [{
-        data: [stats.free.length, stats.paid.length],
-        backgroundColor: [chartColor(0.7, 2), chartColor(0.7, 0)],
-        borderRadius: 6,
-      }]
-    },
-    options: {
-      ...CHART_DEFAULTS,
-      plugins: { ...CHART_DEFAULTS.plugins, legend: { display: false } },
-    }
-  });
-
-  // Leaderboard
-  const lbEl = document.getElementById("leaderboard");
-  const maxCount = stats.topCreators[0]?.[1]?.count || 1;
-  lbEl.innerHTML = stats.topCreators.slice(0, 12).map(([name, s], i) => `
-    <div class="lb-row">
-      <div class="lb-rank">${i + 1}</div>
-      <div class="lb-name">${name}</div>
-      <div class="lb-count">${s.count} templates</div>
-      <div class="lb-bar-wrap"><div class="lb-bar" style="width:${(s.count/maxCount*100).toFixed(0)}%"></div></div>
-    </div>`).join("");
-
-  // History chart
-  if (historyData.length >= 2 && document.getElementById("historyChart")) {
-    new Chart(document.getElementById("historyChart"), {
-      type: "line",
-      data: {
-        labels: historyData.map(h => h.date.slice(5)), // MM-DD
-        datasets: [
-          {
-            label: "Total",
-            data: historyData.map(h => h.total),
-            borderColor: chartColor(1, 0),
-            backgroundColor: chartColor(0.1, 0),
-            fill: true,
-            tension: 0.3,
-            pointRadius: 3,
-          },
-          {
-            label: "Free",
-            data: historyData.map(h => h.free),
-            borderColor: chartColor(1, 2),
-            backgroundColor: "transparent",
-            tension: 0.3,
-            pointRadius: 2,
-            borderDash: [4, 3],
-          }
-        ]
-      },
-      options: { ...CHART_DEFAULTS }
-    });
-  }
-}
-
-// ─── INTERACTIONS ─────────────────────────────────────────────────────────────
-window.setSort = function(key) {
-  if (sortKey === key) sortDir *= -1;
-  else { sortKey = key; sortDir = -1; }
-  applyFilters();
-  rerenderTable(computeStats(allTemplates));
-};
-
-window.setQuery = function(val) {
-  filterQuery = val;
-  applyFilters();
-  rerenderTable(computeStats(allTemplates));
-};
-
-window.setType = function(val) {
-  filterType = val;
-  applyFilters();
-  rerenderTable(computeStats(allTemplates));
-};
-
-window.setCategory = function(val) {
-  filterCategory = val;
-  applyFilters();
-  rerenderTable(computeStats(allTemplates));
-};
-
-window.goToPage = function(p) {
-  const total = Math.ceil(filteredTemplates.length / PAGE_SIZE);
-  if (p < 1 || p > total) return;
-  currentPage = p;
-  rerenderTable(computeStats(allTemplates));
-  document.getElementById("table-section").scrollIntoView({ behavior: "smooth", block: "start" });
-};
-
-// ─── BOOT ─────────────────────────────────────────────────────────────────────
-(async () => {
+async function init() {
   try {
-    const latest = await loadData();
-    if (!latest || !latest.templates) {
-      throw new Error("No data found. Run the scraper first: python scraper/scrape.py");
-    }
-    applyFilters();
-    renderApp(latest);
-  } catch (err) {
-    document.getElementById("app").innerHTML = `
-      <div class="error-msg">
-        <strong>Could not load data</strong><br><br>
-        ${err.message}<br><br>
-        Make sure <code>data/latest.json</code> exists. Run:<br>
-        <code>python scraper/scrape.py</code>
-      </div>`;
+    const [latestRes, historyRes] = await Promise.all([
+      fetch(DATA_URL + '?t=' + Date.now()),
+      fetch(HISTORY_URL + '?t=' + Date.now()).catch(() => null)
+    ]);
+
+    if (!latestRes.ok) throw new Error(`HTTP ${latestRes.status}`);
+    const latest = await latestRes.json();
+    const history = historyRes && historyRes.ok ? await historyRes.json() : [];
+
+    allTemplates = latest.templates || [];
+    if (allTemplates.length === 0) throw new Error("No templates");
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+
+    // Last updated
+    const d = new Date(latest.scraped_at);
+    document.getElementById('last-updated').textContent =
+      'Updated ' + d.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' }) +
+      ' ' + d.toLocaleTimeString('en-US', { hour:'2-digit', minute:'2-digit' }) + ' UTC';
+
+    renderKPIs(allTemplates);
+    renderCharts(allTemplates, history);
+    filtered = [...allTemplates];
+    renderTable();
+    bindControls();
+
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error-div').style.display = 'block';
+    console.error(e);
   }
-})();
+}
+
+function fmt(n) {
+  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n/1000).toFixed(1) + 'K';
+  return n.toString();
+}
+
+function renderKPIs(t) {
+  const free = t.filter(x => x.is_free);
+  const paid = t.filter(x => !x.is_free);
+  const prices = paid.map(x => parseFloat((x.price||'0').replace(/[^0-9.]/g,''))).filter(n => n > 0);
+  const avg = prices.length ? (prices.reduce((a,b)=>a+b,0)/prices.length).toFixed(0) : 0;
+
+  document.getElementById('kpi-total').textContent = fmt(t.length);
+  document.getElementById('kpi-free').textContent = fmt(free.length);
+  document.getElementById('kpi-paid').textContent = fmt(paid.length);
+  document.getElementById('kpi-avgprice').textContent = avg > 0 ? '$' + avg : 'N/A';
+  document.getElementById('kpi-likes').textContent = fmt(t.reduce((a,x)=>a+(x.likes||0),0));
+  document.getElementById('kpi-views').textContent = fmt(t.reduce((a,x)=>a+(x.views||0),0));
+}
+
+function renderCharts(t, history) {
+  const purple = '#6b5cf6', cyan = '#06b6d4', green = '#22c55e', orange = '#f97316';
+
+  // Free vs Paid donut
+  const free = t.filter(x=>x.is_free).length;
+  new Chart(document.getElementById('chart-freepaid'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Free', 'Paid'],
+      datasets: [{ data: [free, t.length-free], backgroundColor: [green, purple], borderWidth: 0 }]
+    },
+    options: { plugins: { legend: { labels: { color: '#888' } } }, cutout: '65%' }
+  });
+
+  // Top categories
+  const catMap = {};
+  t.forEach(x => {
+    const cats = (x.category || '').split(',').map(c=>c.trim()).filter(Boolean);
+    if (!cats.length) { catMap['Uncategorized'] = (catMap['Uncategorized']||0)+1; return; }
+    cats.forEach(c => { catMap[c] = (catMap[c]||0)+1; });
+  });
+  const topCats = Object.entries(catMap).sort((a,b)=>b[1]-a[1]).slice(0,8);
+  new Chart(document.getElementById('chart-categories'), {
+    type: 'bar',
+    data: {
+      labels: topCats.map(x=>x[0]),
+      datasets: [{ data: topCats.map(x=>x[1]), backgroundColor: purple, borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: darkScales() }
+  });
+
+  // Price distribution
+  const buckets = { 'Free': 0, '$1-29': 0, '$30-59': 0, '$60-99': 0, '$100-149': 0, '$150+': 0 };
+  t.forEach(x => {
+    if (x.is_free) { buckets['Free']++; return; }
+    const p = parseFloat((x.price||'0').replace(/[^0-9.]/g,''));
+    if (p < 30) buckets['$1-29']++;
+    else if (p < 60) buckets['$30-59']++;
+    else if (p < 100) buckets['$60-99']++;
+    else if (p < 150) buckets['$100-149']++;
+    else buckets['$150+']++;
+  });
+  new Chart(document.getElementById('chart-prices'), {
+    type: 'bar',
+    data: {
+      labels: Object.keys(buckets),
+      datasets: [{ data: Object.values(buckets), backgroundColor: [green,cyan,purple,orange,'#ec4899','#f59e0b'], borderRadius: 4 }]
+    },
+    options: { plugins: { legend: { display: false } }, scales: darkScales() }
+  });
+
+  // Top 10 by likes
+  const top10 = [...t].sort((a,b)=>(b.likes||0)-(a.likes||0)).slice(0,10);
+  new Chart(document.getElementById('chart-toplikes'), {
+    type: 'bar',
+    data: {
+      labels: top10.map(x => x.name.length > 14 ? x.name.slice(0,14)+'…' : x.name),
+      datasets: [{ data: top10.map(x=>x.likes||0), backgroundColor: purple, borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', plugins: { legend: { display: false } }, scales: darkScales() }
+  });
+
+  // Growth over time
+  if (history && history.length > 1) {
+    new Chart(document.getElementById('chart-growth'), {
+      type: 'line',
+      data: {
+        labels: history.map(x=>x.date),
+        datasets: [{
+          label: 'Total Templates',
+          data: history.map(x=>x.total),
+          borderColor: purple, backgroundColor: 'rgba(107,92,246,0.1)',
+          fill: true, tension: 0.4, pointRadius: 3
+        }]
+      },
+      options: { plugins: { legend: { display: false } }, scales: darkScales() }
+    });
+  } else {
+    document.getElementById('chart-growth').parentElement.innerHTML =
+      '<div class="chart-title">Growth Over Time</div><div style="padding:60px 0;text-align:center;color:var(--muted);font-size:13px">Run the scraper daily to build history</div>';
+  }
+}
+
+function renderTable() {
+  const start = (currentPage-1)*PER_PAGE;
+  const page = filtered.slice(start, start+PER_PAGE);
+  const tbody = document.getElementById('table-body');
+
+  tbody.innerHTML = page.map((t,i) => `
+    <tr>
+      <td style="color:var(--muted);font-size:12px">${start+i+1}</td>
+      <td><a class="template-link" href="${t.url}" target="_blank">${t.name}</a></td>
+      <td><span class="creator-tag">${t.creator || '—'}</span></td>
+      <td style="font-size:12px;color:var(--muted)">${t.category ? t.category.split(',')[0].trim() : '—'}</td>
+      <td><span class="badge ${t.is_free?'badge-free':'badge-paid'}">${t.price}</span></td>
+      <td class="stat-num">${fmt(t.likes||0)}</td>
+      <td class="stat-num">${fmt(t.views||0)}</td>
+      <td class="stat-num">${fmt(t.comments||0)}</td>
+    </tr>
+  `).join('');
+
+  const total = filtered.length;
+  const pages = Math.ceil(total/PER_PAGE);
+  document.getElementById('page-info').textContent = `Page ${currentPage} of ${pages} (${fmt(total)} results)`;
+  document.getElementById('result-count').textContent = `${fmt(total)} templates`;
+  document.getElementById('btn-prev').disabled = currentPage <= 1;
+  document.getElementById('btn-next').disabled = currentPage >= pages;
+}
+
+function applyFilters() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const pf = document.getElementById('filter-price').value;
+  const sort = document.getElementById('sort-by').value;
+
+  filtered = allTemplates.filter(t => {
+    const matchQ = !q || t.name.toLowerCase().includes(q) || (t.creator||'').toLowerCase().includes(q) || (t.category||'').toLowerCase().includes(q);
+    const matchP = pf === 'all' || (pf === 'free' && t.is_free) || (pf === 'paid' && !t.is_free);
+    return matchQ && matchP;
+  });
+
+  filtered.sort((a,b) => {
+    if (sort === 'likes') return (b.likes||0)-(a.likes||0);
+    if (sort === 'views') return (b.views||0)-(a.views||0);
+    if (sort === 'comments') return (b.comments||0)-(a.comments||0);
+    if (sort === 'name') return a.name.localeCompare(b.name);
+    if (sort === 'price') {
+      const pa = a.is_free ? 0 : parseFloat((a.price||'0').replace(/[^0-9.]/g,''));
+      const pb = b.is_free ? 0 : parseFloat((b.price||'0').replace(/[^0-9.]/g,''));
+      return pb - pa;
+    }
+    return 0;
+  });
+
+  currentPage = 1;
+  renderTable();
+}
+
+function changePage(dir) {
+  const pages = Math.ceil(filtered.length/PER_PAGE);
+  currentPage = Math.max(1, Math.min(pages, currentPage+dir));
+  renderTable();
+  window.scrollTo({ top: document.querySelector('.table-section').offsetTop - 20, behavior: 'smooth' });
+}
+
+function bindControls() {
+  document.getElementById('search').addEventListener('input', applyFilters);
+  document.getElementById('filter-price').addEventListener('change', applyFilters);
+  document.getElementById('sort-by').addEventListener('change', applyFilters);
+  applyFilters();
+}
+
+init();
 </script>
 </body>
 </html>
