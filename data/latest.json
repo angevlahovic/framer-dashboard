@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-20T13:34:43.648360+00:00",
-  "total": 7954,
+  "scraped_at": "2026-06-20T13:57:50.424661+00:00",
+  "total": 7905,
   "templates": [
     {
       "slug": "modern",
@@ -7426,19 +7426,6 @@
       "scraped_at": "2026-06-20T13:34:42.001282+00:00"
     },
     {
-      "slug": "kalerion",
-      "name": "kalerion",
-      "url": "https://www.framer.com/community/marketplace/templates/kalerion/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Emon",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.001351+00:00"
-    },
-    {
       "slug": "tawfiqulemon",
       "name": "Emon",
       "url": "https://www.framer.com/community/marketplace/templates/tawfiqulemon/",
@@ -8100,19 +8087,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.016329+00:00"
-    },
-    {
-      "slug": "eliza",
-      "name": "eliza",
-      "url": "https://www.framer.com/community/marketplace/templates/eliza/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.016342+00:00"
     },
     {
       "slug": "captcha",
@@ -9647,19 +9621,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.025447+00:00"
-    },
-    {
-      "slug": "buildaxa",
-      "name": "buildaxa",
-      "url": "https://www.framer.com/community/marketplace/templates/buildaxa/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Design Kuthir",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.025524+00:00"
     },
     {
       "slug": "uncover",
@@ -14784,19 +14745,6 @@
       "scraped_at": "2026-06-20T13:34:42.105391+00:00"
     },
     {
-      "slug": "veltera",
-      "name": "veltera",
-      "url": "https://www.framer.com/community/marketplace/templates/veltera/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.105424+00:00"
-    },
-    {
       "slug": "nubien",
       "name": "Nubien",
       "url": "https://www.framer.com/community/marketplace/templates/nubien/",
@@ -15588,19 +15536,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.110015+00:00"
-    },
-    {
-      "slug": "zynq",
-      "name": "zynq",
-      "url": "https://www.framer.com/community/marketplace/templates/zynq/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Emon",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.110077+00:00"
     },
     {
       "slug": "opus",
@@ -20296,19 +20231,6 @@
       "scraped_at": "2026-06-20T13:34:42.171224+00:00"
     },
     {
-      "slug": "inflame",
-      "name": "inflame",
-      "url": "https://www.framer.com/community/marketplace/templates/inflame/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Faruk Yurtseven",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.171304+00:00"
-    },
-    {
       "slug": "ulmora",
       "name": "Ulmora",
       "url": "https://www.framer.com/community/marketplace/templates/ulmora/",
@@ -24001,19 +23923,6 @@
       "scraped_at": "2026-06-20T13:34:42.223428+00:00"
     },
     {
-      "slug": "konnect",
-      "name": "konnect",
-      "url": "https://www.framer.com/community/marketplace/templates/konnect/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Sinax",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.223493+00:00"
-    },
-    {
       "slug": "agnos",
       "name": "Agnos",
       "url": "https://www.framer.com/community/marketplace/templates/agnos/",
@@ -24818,19 +24727,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.228147+00:00"
-    },
-    {
-      "slug": "designbydeke",
-      "name": "designbydeke",
-      "url": "https://www.framer.com/community/marketplace/templates/designbydeke/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.809957+00:00"
     },
     {
       "slug": "collins",
@@ -25845,19 +25741,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.233133+00:00"
-    },
-    {
-      "slug": "hellorizkieko",
-      "name": "hellorizkieko",
-      "url": "https://www.framer.com/community/marketplace/templates/hellorizkieko/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.782367+00:00"
     },
     {
       "slug": "avix-studio",
@@ -27433,19 +27316,6 @@
       "scraped_at": "2026-06-20T13:34:42.253435+00:00"
     },
     {
-      "slug": "jodysaptra",
-      "name": "jodysaptra",
-      "url": "https://www.framer.com/community/marketplace/templates/jodysaptra/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.060059+00:00"
-    },
-    {
       "slug": "cadence",
       "name": "Cadence",
       "url": "https://www.framer.com/community/marketplace/templates/cadence/",
@@ -27847,19 +27717,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.255651+00:00"
-    },
-    {
-      "slug": "madebrux",
-      "name": "madebrux",
-      "url": "https://www.framer.com/community/marketplace/templates/madebrux/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.255702+00:00"
     },
     {
       "slug": "levi",
@@ -33985,19 +33842,6 @@
       "scraped_at": "2026-06-20T13:34:42.332580+00:00"
     },
     {
-      "slug": "fourtwelve",
-      "name": "fourtwelve",
-      "url": "https://www.framer.com/community/marketplace/templates/fourtwelve/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.200198+00:00"
-    },
-    {
       "slug": "sun-moon",
       "name": "Sun & Moon",
       "url": "https://www.framer.com/community/marketplace/templates/sun-moon/",
@@ -35506,19 +35350,6 @@
       "scraped_at": "2026-06-20T13:34:42.352796+00:00"
     },
     {
-      "slug": "branditecture",
-      "name": "branditecture",
-      "url": "https://www.framer.com/community/marketplace/templates/branditecture/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.890489+00:00"
-    },
-    {
       "slug": "liaison",
       "name": "LIAISON",
       "url": "https://www.framer.com/community/marketplace/templates/liaison/",
@@ -35948,19 +35779,6 @@
       "scraped_at": "2026-06-20T13:34:42.355070+00:00"
     },
     {
-      "slug": "ideapeel",
-      "name": "ideapeel",
-      "url": "https://www.framer.com/community/marketplace/templates/ideapeel/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.355115+00:00"
-    },
-    {
       "slug": "archimagi",
       "name": "Archimagi",
       "url": "https://www.framer.com/community/marketplace/templates/archimagi/",
@@ -36167,19 +35985,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.356141+00:00"
-    },
-    {
-      "slug": "nxson",
-      "name": "nxson",
-      "url": "https://www.framer.com/community/marketplace/templates/nxson/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.110754+00:00"
     },
     {
       "slug": "m54-agency-template",
@@ -37168,19 +36973,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.373550+00:00"
-    },
-    {
-      "slug": "wahid",
-      "name": "wahid",
-      "url": "https://www.framer.com/community/marketplace/templates/wahid/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.373557+00:00"
     },
     {
       "slug": "velka",
@@ -39393,19 +39185,6 @@
       "scraped_at": "2026-06-20T13:34:42.397820+00:00"
     },
     {
-      "slug": "orbitx",
-      "name": "orbitx",
-      "url": "https://www.framer.com/community/marketplace/templates/orbitx/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.199896+00:00"
-    },
-    {
       "slug": "daron",
       "name": "Daron",
       "url": "https://www.framer.com/community/marketplace/templates/daron/",
@@ -39976,19 +39755,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.400874+00:00"
-    },
-    {
-      "slug": "dom",
-      "name": "dom",
-      "url": "https://www.framer.com/community/marketplace/templates/dom/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Timur Bazarbaev",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.400936+00:00"
     },
     {
       "slug": "baev",
@@ -40574,19 +40340,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.415528+00:00"
-    },
-    {
-      "slug": "prod",
-      "name": "prod",
-      "url": "https://www.framer.com/community/marketplace/templates/prod/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Timur Bazarbaev",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.415611+00:00"
     },
     {
       "slug": "wulf",
@@ -45217,19 +44970,6 @@
       "scraped_at": "2026-06-20T13:34:42.501251+00:00"
     },
     {
-      "slug": "cesar",
-      "name": "cesar",
-      "url": "https://www.framer.com/community/marketplace/templates/cesar/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Plaiter",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.501307+00:00"
-    },
-    {
       "slug": "homforte",
       "name": "Homforte",
       "url": "https://www.framer.com/community/marketplace/templates/homforte/",
@@ -46335,19 +46075,6 @@
       "scraped_at": "2026-06-20T13:34:42.520360+00:00"
     },
     {
-      "slug": "boucheedesign",
-      "name": "boucheedesign",
-      "url": "https://www.framer.com/community/marketplace/templates/boucheedesign/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.092111+00:00"
-    },
-    {
       "slug": "mino-area",
       "name": "Mino Area",
       "url": "https://www.framer.com/community/marketplace/templates/mino-area/",
@@ -46803,19 +46530,6 @@
       "scraped_at": "2026-06-20T13:34:42.523162+00:00"
     },
     {
-      "slug": "virtualjesper",
-      "name": "virtualjesper",
-      "url": "https://www.framer.com/community/marketplace/templates/virtualjesper/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.171473+00:00"
-    },
-    {
       "slug": "grotesque",
       "name": "Grotesque",
       "url": "https://www.framer.com/community/marketplace/templates/grotesque/",
@@ -46944,19 +46658,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.523752+00:00"
-    },
-    {
-      "slug": "waitlistss",
-      "name": "waitlistss",
-      "url": "https://www.framer.com/community/marketplace/templates/waitlistss/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Zaid ",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.523865+00:00"
     },
     {
       "slug": "zaidofficial",
@@ -47958,19 +47659,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.529455+00:00"
-    },
-    {
-      "slug": "basmstudio",
-      "name": "basmstudio",
-      "url": "https://www.framer.com/community/marketplace/templates/basmstudio/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.529621+00:00"
     },
     {
       "slug": "carletkinson",
@@ -49817,19 +49505,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.557833+00:00"
-    },
-    {
-      "slug": "ceetudio",
-      "name": "ceetudio",
-      "url": "https://www.framer.com/community/marketplace/templates/ceetudio/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.558136+00:00"
     },
     {
       "slug": "volthaus",
@@ -53264,19 +52939,6 @@
       "scraped_at": "2026-06-20T13:34:42.605950+00:00"
     },
     {
-      "slug": "sanssarif",
-      "name": "sanssarif",
-      "url": "https://www.framer.com/community/marketplace/templates/sanssarif/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.605956+00:00"
-    },
-    {
       "slug": "deepix",
       "name": "Deepix",
       "url": "https://www.framer.com/community/marketplace/templates/deepix/",
@@ -55383,19 +55045,6 @@
       "scraped_at": "2026-06-20T13:34:42.628230+00:00"
     },
     {
-      "slug": "yama",
-      "name": "yama",
-      "url": "https://www.framer.com/community/marketplace/templates/yama/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Brano Mahut",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.628330+00:00"
-    },
-    {
       "slug": "snapcast",
       "name": "SnapCast",
       "url": "https://www.framer.com/community/marketplace/templates/snapcast/",
@@ -56527,19 +56176,6 @@
       "scraped_at": "2026-06-20T13:34:42.647627+00:00"
     },
     {
-      "slug": "levindbr",
-      "name": "levindbr",
-      "url": "https://www.framer.com/community/marketplace/templates/levindbr/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.695904+00:00"
-    },
-    {
       "slug": "opaque",
       "name": "Opaque",
       "url": "https://www.framer.com/community/marketplace/templates/opaque/",
@@ -57448,19 +57084,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.999358+00:00"
-    },
-    {
-      "slug": "zframe",
-      "name": "zframe",
-      "url": "https://www.framer.com/community/marketplace/templates/zframe/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Dinesh",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.652269+00:00"
     },
     {
       "slug": "dinesh",
@@ -62468,19 +62091,6 @@
       "scraped_at": "2026-06-20T13:34:42.720303+00:00"
     },
     {
-      "slug": "wanderly-trip",
-      "name": "wanderly-trip",
-      "url": "https://www.framer.com/community/marketplace/templates/wanderly-trip/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Talha Zubair",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.720349+00:00"
-    },
-    {
       "slug": "talha-zubair-fu58ym",
       "name": "Talha Zubair",
       "url": "https://www.framer.com/community/marketplace/templates/talha-zubair-fu58ym/",
@@ -65991,19 +65601,6 @@
       "scraped_at": "2026-06-20T13:34:42.759826+00:00"
     },
     {
-      "slug": "fn5t",
-      "name": "fn5t",
-      "url": "https://www.framer.com/community/marketplace/templates/fn5t/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.759830+00:00"
-    },
-    {
       "slug": "vs-collins",
       "name": "CollinsPhoto",
       "url": "https://www.framer.com/community/marketplace/templates/vs-collins/",
@@ -68084,19 +67681,6 @@
       "scraped_at": "2026-06-20T13:34:42.781337+00:00"
     },
     {
-      "slug": "flowpilot",
-      "name": "flowpilot",
-      "url": "https://www.framer.com/community/marketplace/templates/flowpilot/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Seyi",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.781394+00:00"
-    },
-    {
       "slug": "uiseyi",
       "name": "Seyi",
       "url": "https://www.framer.com/community/marketplace/templates/uiseyi/",
@@ -69189,19 +68773,6 @@
       "scraped_at": "2026-06-20T13:34:42.786868+00:00"
     },
     {
-      "slug": "raduc",
-      "name": "raduc",
-      "url": "https://www.framer.com/community/marketplace/templates/raduc/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.195071+00:00"
-    },
-    {
       "slug": "olio",
       "name": "Olio",
       "url": "https://www.framer.com/community/marketplace/templates/olio/",
@@ -70281,19 +69852,6 @@
       "scraped_at": "2026-06-20T13:34:42.953757+00:00"
     },
     {
-      "slug": "nexzora",
-      "name": "nexzora",
-      "url": "https://www.framer.com/community/marketplace/templates/nexzora/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Praise Onyenwe",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.811172+00:00"
-    },
-    {
       "slug": "praise-onyenwe",
       "name": "Praise Onyenwe",
       "url": "https://www.framer.com/community/marketplace/templates/praise-onyenwe/",
@@ -71360,19 +70918,6 @@
       "scraped_at": "2026-06-20T13:34:42.819567+00:00"
     },
     {
-      "slug": "pixfort",
-      "name": "pixfort",
-      "url": "https://www.framer.com/community/marketplace/templates/pixfort/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.136332+00:00"
-    },
-    {
       "slug": "saatify",
       "name": "Saatify",
       "url": "https://www.framer.com/community/marketplace/templates/saatify/",
@@ -71607,19 +71152,6 @@
       "scraped_at": "2026-06-20T13:34:42.822197+00:00"
     },
     {
-      "slug": "noctara",
-      "name": "noctara",
-      "url": "https://www.framer.com/community/marketplace/templates/noctara/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Tarun Anand",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.822289+00:00"
-    },
-    {
       "slug": "uxdtarun",
       "name": "Tarun Anand",
       "url": "https://www.framer.com/community/marketplace/templates/uxdtarun/",
@@ -71696,19 +71228,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.823152+00:00"
-    },
-    {
-      "slug": "giomak",
-      "name": "giomak",
-      "url": "https://www.framer.com/community/marketplace/templates/giomak/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.994585+00:00"
     },
     {
       "slug": "verris",
@@ -72712,32 +72231,6 @@
       "scraped_at": "2026-06-20T13:34:42.847042+00:00"
     },
     {
-      "slug": "sewaitlyst",
-      "name": "sewaitlyst",
-      "url": "https://www.framer.com/community/marketplace/templates/sewaitlyst/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "jodysaptra",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.847084+00:00"
-    },
-    {
-      "slug": "portfly",
-      "name": "portfly",
-      "url": "https://www.framer.com/community/marketplace/templates/portfly/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "jodysaptra",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.847128+00:00"
-    },
-    {
       "slug": "aiq",
       "name": "AIQ",
       "url": "https://www.framer.com/community/marketplace/templates/aiq/",
@@ -73256,19 +72749,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.850078+00:00"
-    },
-    {
-      "slug": "odyste",
-      "name": "odyste",
-      "url": "https://www.framer.com/community/marketplace/templates/odyste/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.850123+00:00"
     },
     {
       "slug": "hausmark",
@@ -76495,19 +75975,6 @@
       "scraped_at": "2026-06-20T13:34:42.890819+00:00"
     },
     {
-      "slug": "1977",
-      "name": "1977",
-      "url": "https://www.framer.com/community/marketplace/templates/1977/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "EStora",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.890905+00:00"
-    },
-    {
       "slug": "estora",
       "name": "EStora",
       "url": "https://www.framer.com/community/marketplace/templates/estora/",
@@ -79028,19 +78495,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.914628+00:00"
-    },
-    {
-      "slug": "lnlstudios",
-      "name": "lnlstudios",
-      "url": "https://www.framer.com/community/marketplace/templates/lnlstudios/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.973737+00:00"
     },
     {
       "slug": "gymone",
@@ -82852,19 +82306,6 @@
       "scraped_at": "2026-06-20T13:34:42.956879+00:00"
     },
     {
-      "slug": "clif-stock",
-      "name": "clif-stock",
-      "url": "https://www.framer.com/community/marketplace/templates/clif-stock/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:42.956884+00:00"
-    },
-    {
       "slug": "platify",
       "name": "Platify",
       "url": "https://www.framer.com/community/marketplace/templates/platify/",
@@ -83123,19 +82564,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:42.957968+00:00"
-    },
-    {
-      "slug": "dawe",
-      "name": "dawe",
-      "url": "https://www.framer.com/community/marketplace/templates/dawe/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.154802+00:00"
     },
     {
       "slug": "visionary",
@@ -87779,19 +87207,6 @@
       "scraped_at": "2026-06-20T13:34:43.015508+00:00"
     },
     {
-      "slug": "luke",
-      "name": "luke",
-      "url": "https://www.framer.com/community/marketplace/templates/luke/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.015512+00:00"
-    },
-    {
       "slug": "tessa-morgan",
       "name": "Tessa Morgan",
       "url": "https://www.framer.com/community/marketplace/templates/tessa-morgan/",
@@ -90847,19 +90262,6 @@
       "scraped_at": "2026-06-20T13:34:43.053898+00:00"
     },
     {
-      "slug": "lilapp",
-      "name": "lilapp",
-      "url": "https://www.framer.com/community/marketplace/templates/lilapp/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Noman",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.053977+00:00"
-    },
-    {
       "slug": "funnelz",
       "name": "Funnelz",
       "url": "https://www.framer.com/community/marketplace/templates/funnelz/",
@@ -90910,19 +90312,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:43.054278+00:00"
-    },
-    {
-      "slug": "isom",
-      "name": "isom",
-      "url": "https://www.framer.com/community/marketplace/templates/isom/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "Sajjad Mo Nia",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.054356+00:00"
     },
     {
       "slug": "sajjad",
@@ -91653,19 +91042,6 @@
       "scraped_at": "2026-06-20T13:34:43.059651+00:00"
     },
     {
-      "slug": "bujadesign",
-      "name": "bujadesign",
-      "url": "https://www.framer.com/community/marketplace/templates/bujadesign/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.196291+00:00"
-    },
-    {
       "slug": "harmoni",
       "name": "Harmoni",
       "url": "https://www.framer.com/community/marketplace/templates/harmoni/",
@@ -91872,19 +91248,6 @@
       "comments": 0,
       "views": 0,
       "scraped_at": "2026-06-20T13:34:43.060479+00:00"
-    },
-    {
-      "slug": "yzxj",
-      "name": "yzxj",
-      "url": "https://www.framer.com/community/marketplace/templates/yzxj/",
-      "price": "Free",
-      "is_free": true,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "comments": 0,
-      "views": 0,
-      "scraped_at": "2026-06-20T13:34:43.060485+00:00"
     },
     {
       "slug": "nirastate",
