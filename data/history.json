@@ -7,5 +7,14 @@
     "avg_price": 0,
     "total_likes": 0,
     "total_views": 0
+  },
+  {
+    "date": "2026-06-21",
+    "total": 7908,
+    "free": 7907,
+    "paid": 1,
+    "avg_price": 69.0,
+    "total_likes": 0,
+    "total_views": 0
   }
 ]

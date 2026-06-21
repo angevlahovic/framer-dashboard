@@ -1,7 +1,46 @@
 {
-  "scraped_at": "2026-06-20T13:57:50.424661+00:00",
-  "total": 7905,
+  "scraped_at": "2026-06-21T12:32:47.624111+00:00",
+  "total": 7908,
   "templates": [
+    {
+      "slug": "webverse",
+      "name": "Webverse",
+      "url": "https://www.framer.com/community/marketplace/templates/webverse/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-21T12:32:44.774194+00:00"
+    },
+    {
+      "slug": "kalerion",
+      "name": "kalerion",
+      "url": "https://www.framer.com/community/marketplace/templates/kalerion/",
+      "price": "$69",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-21T12:32:46.105620+00:00"
+    },
+    {
+      "slug": "green-haven",
+      "name": "Green Haven",
+      "url": "https://www.framer.com/community/marketplace/templates/green-haven/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-21T12:32:47.472800+00:00"
+    },
     {
       "slug": "modern",
       "name": "Modern",
