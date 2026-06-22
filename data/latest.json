@@ -1,19 +1,19 @@
 {
-  "scraped_at": "2026-06-21T12:32:47.624111+00:00",
-  "total": 7908,
+  "scraped_at": "2026-06-22T19:00:05.028572+00:00",
+  "total": 7909,
   "templates": [
     {
-      "slug": "webverse",
-      "name": "Webverse",
-      "url": "https://www.framer.com/community/marketplace/templates/webverse/",
-      "price": "Free",
-      "is_free": true,
+      "slug": "dieter-rams",
+      "name": "Dieter Rams",
+      "url": "https://www.framer.com/community/marketplace/templates/dieter-rams/",
+      "price": "$69",
+      "is_free": false,
       "creator": "",
       "category": "",
       "likes": 0,
       "views": 0,
       "comments": 0,
-      "scraped_at": "2026-06-21T12:32:44.774194+00:00"
+      "scraped_at": "2026-06-22T19:00:03.423178+00:00"
     },
     {
       "slug": "kalerion",
@@ -26,7 +26,20 @@
       "likes": 0,
       "views": 0,
       "comments": 0,
-      "scraped_at": "2026-06-21T12:32:46.105620+00:00"
+      "scraped_at": "2026-06-22T19:00:04.870603+00:00"
+    },
+    {
+      "slug": "webverse",
+      "name": "Webverse",
+      "url": "https://www.framer.com/community/marketplace/templates/webverse/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-21T12:32:44.774194+00:00"
     },
     {
       "slug": "green-haven",
