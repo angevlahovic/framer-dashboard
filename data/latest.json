@@ -1,19 +1,19 @@
 {
-  "scraped_at": "2026-06-23T16:13:09.192280+00:00",
+  "scraped_at": "2026-06-24T13:57:31.384880+00:00",
   "total": 7909,
   "templates": [
     {
-      "slug": "kalerion",
-      "name": "kalerion",
-      "url": "https://www.framer.com/community/marketplace/templates/kalerion/",
-      "price": "$69",
+      "slug": "quantumflux",
+      "name": "QuantumFlux",
+      "url": "https://www.framer.com/community/marketplace/templates/quantumflux/",
+      "price": "$79",
       "is_free": false,
       "creator": "",
       "category": "",
       "likes": 0,
       "views": 0,
       "comments": 0,
-      "scraped_at": "2026-06-23T16:13:09.022449+00:00"
+      "scraped_at": "2026-06-24T13:57:31.222574+00:00"
     },
     {
       "slug": "dieter-rams",
