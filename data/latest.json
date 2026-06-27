@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-06-26T13:35:32.130222+00:00",
-  "total": 7909,
+  "scraped_at": "2026-06-27T11:17:33.917494+00:00",
+  "total": 7910,
   "templates": [
+    {
+      "slug": "fathom",
+      "name": "Fathom",
+      "url": "https://www.framer.com/community/marketplace/templates/fathom/",
+      "price": "$129",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-27T11:17:33.760239+00:00"
+    },
     {
       "slug": "quantumflux",
       "name": "QuantumFlux",
