@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-06-27T11:17:33.917494+00:00",
-  "total": 7910,
+  "scraped_at": "2026-06-28T12:01:24.214076+00:00",
+  "total": 7911,
   "templates": [
+    {
+      "slug": "buildaxa",
+      "name": "buildaxa",
+      "url": "https://www.framer.com/community/marketplace/templates/buildaxa/",
+      "price": "$99",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-28T12:01:24.005803+00:00"
+    },
     {
       "slug": "fathom",
       "name": "Fathom",
