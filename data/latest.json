@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-28T12:01:24.214076+00:00",
-  "total": 7911,
+  "scraped_at": "2026-06-29T17:15:07.384125+00:00",
+  "total": 7912,
   "templates": [
     {
       "slug": "buildaxa",
@@ -13,7 +13,20 @@
       "likes": 0,
       "views": 0,
       "comments": 0,
-      "scraped_at": "2026-06-28T12:01:24.005803+00:00"
+      "scraped_at": "2026-06-29T17:15:05.992634+00:00"
+    },
+    {
+      "slug": "precept",
+      "name": "Precept\u2122",
+      "url": "https://www.framer.com/community/marketplace/templates/precept/",
+      "price": "$99",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-06-29T17:15:07.188121+00:00"
     },
     {
       "slug": "fathom",
