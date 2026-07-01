@@ -1,7 +1,59 @@
 {
-  "scraped_at": "2026-06-30T09:39:52.615112+00:00",
-  "total": 7912,
+  "scraped_at": "2026-07-01T09:51:09.737296+00:00",
+  "total": 7916,
   "templates": [
+    {
+      "slug": "nexsign",
+      "name": "NEXSIGN",
+      "url": "https://www.framer.com/community/marketplace/templates/nexsign/",
+      "price": "$129",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-01T09:51:02.185990+00:00"
+    },
+    {
+      "slug": "lesmana",
+      "name": "Lesmana",
+      "url": "https://www.framer.com/community/marketplace/templates/lesmana/",
+      "price": "$129",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-01T09:51:03.586325+00:00"
+    },
+    {
+      "slug": "hanza",
+      "name": "Hanza",
+      "url": "https://www.framer.com/community/marketplace/templates/hanza/",
+      "price": "$99",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-01T09:51:06.257875+00:00"
+    },
+    {
+      "slug": "desk",
+      "name": "Desk",
+      "url": "https://www.framer.com/community/marketplace/templates/desk/",
+      "price": "$29",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-01T09:51:07.496299+00:00"
+    },
     {
       "slug": "buildaxa",
       "name": "buildaxa",
@@ -13,7 +65,7 @@
       "likes": 0,
       "views": 0,
       "comments": 0,
-      "scraped_at": "2026-06-30T09:39:52.420677+00:00"
+      "scraped_at": "2026-07-01T09:51:09.512372+00:00"
     },
     {
       "slug": "precept",
