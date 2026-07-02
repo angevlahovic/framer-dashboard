@@ -1,7 +1,33 @@
 {
-  "scraped_at": "2026-07-01T09:51:09.737296+00:00",
-  "total": 7916,
+  "scraped_at": "2026-07-02T08:59:33.204927+00:00",
+  "total": 7917,
   "templates": [
+    {
+      "slug": "orbit-waitlist",
+      "name": "Orbit Waitlist",
+      "url": "https://www.framer.com/community/marketplace/templates/orbit-waitlist/",
+      "price": "$19",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-02T08:59:31.270001+00:00"
+    },
+    {
+      "slug": "ecom",
+      "name": "ECOM",
+      "url": "https://www.framer.com/community/marketplace/templates/ecom/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-02T08:59:32.938711+00:00"
+    },
     {
       "slug": "nexsign",
       "name": "NEXSIGN",
@@ -53,19 +79,6 @@
       "views": 0,
       "comments": 0,
       "scraped_at": "2026-07-01T09:51:07.496299+00:00"
-    },
-    {
-      "slug": "buildaxa",
-      "name": "buildaxa",
-      "url": "https://www.framer.com/community/marketplace/templates/buildaxa/",
-      "price": "$99",
-      "is_free": false,
-      "creator": "",
-      "category": "",
-      "likes": 0,
-      "views": 0,
-      "comments": 0,
-      "scraped_at": "2026-07-01T09:51:09.512372+00:00"
     },
     {
       "slug": "precept",
