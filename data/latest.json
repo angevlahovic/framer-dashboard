@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-02T08:59:33.204927+00:00",
-  "total": 7917,
+  "scraped_at": "2026-07-03T09:21:09.399962+00:00",
+  "total": 7918,
   "templates": [
+    {
+      "slug": "all",
+      "name": "Responsive HTML Website Templates. Create a Free Website",
+      "url": "https://www.framer.com/community/marketplace/templates/all/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-03T09:21:09.248636+00:00"
+    },
     {
       "slug": "orbit-waitlist",
       "name": "Orbit Waitlist",
