@@ -1,7 +1,33 @@
 {
-  "scraped_at": "2026-07-03T09:21:09.399962+00:00",
-  "total": 7918,
+  "scraped_at": "2026-07-05T08:55:17.297350+00:00",
+  "total": 7920,
   "templates": [
+    {
+      "slug": "politicapro",
+      "name": "PoliticaPro",
+      "url": "https://www.framer.com/community/marketplace/templates/politicapro/",
+      "price": "$49",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-05T08:55:14.121356+00:00"
+    },
+    {
+      "slug": "arum",
+      "name": "Arum",
+      "url": "https://www.framer.com/community/marketplace/templates/arum/",
+      "price": "$79",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-05T08:55:17.145756+00:00"
+    },
     {
       "slug": "all",
       "name": "Responsive HTML Website Templates. Create a Free Website",
