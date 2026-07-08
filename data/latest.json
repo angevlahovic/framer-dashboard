@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-05T08:55:17.297350+00:00",
-  "total": 7920,
+  "scraped_at": "2026-07-08T08:31:37.653663+00:00",
+  "total": 7921,
   "templates": [
+    {
+      "slug": "lorean",
+      "name": "Lorean",
+      "url": "https://www.framer.com/community/marketplace/templates/lorean/",
+      "price": "$29",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-08T08:31:37.439813+00:00"
+    },
     {
       "slug": "politicapro",
       "name": "PoliticaPro",
