@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-13T09:30:34.146535+00:00",
-  "total": 7923,
+  "scraped_at": "2026-07-14T08:07:52.051720+00:00",
+  "total": 7924,
   "templates": [
+    {
+      "slug": "soren",
+      "name": "Soren",
+      "url": "https://www.framer.com/community/marketplace/templates/soren/",
+      "price": "$149",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-14T08:07:51.967635+00:00"
+    },
     {
       "slug": "valtero-x",
       "name": "Valtero X",
