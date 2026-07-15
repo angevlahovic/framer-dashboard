@@ -1,7 +1,33 @@
 {
-  "scraped_at": "2026-07-14T08:07:52.051720+00:00",
-  "total": 7924,
+  "scraped_at": "2026-07-15T08:14:09.614911+00:00",
+  "total": 7926,
   "templates": [
+    {
+      "slug": "travixa",
+      "name": "Travixa",
+      "url": "https://www.framer.com/community/marketplace/templates/travixa/",
+      "price": "$29",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-15T08:14:08.223356+00:00"
+    },
+    {
+      "slug": "anamorph",
+      "name": "Anamorph",
+      "url": "https://www.framer.com/community/marketplace/templates/anamorph/",
+      "price": "$129",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-15T08:14:09.486231+00:00"
+    },
     {
       "slug": "soren",
       "name": "Soren",
