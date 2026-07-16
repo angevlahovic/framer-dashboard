@@ -1,7 +1,33 @@
 {
-  "scraped_at": "2026-07-15T08:14:09.614911+00:00",
-  "total": 7926,
+  "scraped_at": "2026-07-16T08:16:25.021589+00:00",
+  "total": 7928,
   "templates": [
+    {
+      "slug": "tabfolio",
+      "name": "Tabfolio",
+      "url": "https://www.framer.com/community/marketplace/templates/tabfolio/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-16T08:16:23.229670+00:00"
+    },
+    {
+      "slug": "girtas-malkas",
+      "name": "Girtas Malkas",
+      "url": "https://www.framer.com/community/marketplace/templates/girtas-malkas/",
+      "price": "$90",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-16T08:16:24.921337+00:00"
+    },
     {
       "slug": "travixa",
       "name": "Travixa",
