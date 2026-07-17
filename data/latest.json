@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-16T08:16:25.021589+00:00",
-  "total": 7928,
+  "scraped_at": "2026-07-17T08:12:23.291942+00:00",
+  "total": 7929,
   "templates": [
+    {
+      "slug": "confezence",
+      "name": "Confezence",
+      "url": "https://www.framer.com/community/marketplace/templates/confezence/",
+      "price": "$69",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-17T08:12:23.216721+00:00"
+    },
     {
       "slug": "tabfolio",
       "name": "Tabfolio",
