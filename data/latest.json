@@ -1,7 +1,46 @@
 {
-  "scraped_at": "2026-07-20T09:16:58.271698+00:00",
-  "total": 7936,
+  "scraped_at": "2026-07-21T08:31:51.984577+00:00",
+  "total": 7939,
   "templates": [
+    {
+      "slug": "lumien",
+      "name": "Lumien",
+      "url": "https://www.framer.com/community/marketplace/templates/lumien/",
+      "price": "$130",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-21T08:31:49.645123+00:00"
+    },
+    {
+      "slug": "consultiva",
+      "name": "Consultiva",
+      "url": "https://www.framer.com/community/marketplace/templates/consultiva/",
+      "price": "$79",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-21T08:31:50.813242+00:00"
+    },
+    {
+      "slug": "kafka-law-firm",
+      "name": "Kafka \u2014 Law Firm",
+      "url": "https://www.framer.com/community/marketplace/templates/kafka-law-firm/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-21T08:31:51.925005+00:00"
+    },
     {
       "slug": "dr-k",
       "name": "Dr\u00fck",
