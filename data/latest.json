@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-24T08:30:13.726872+00:00",
-  "total": 7939,
+  "scraped_at": "2026-07-25T08:08:36.181736+00:00",
+  "total": 7940,
   "templates": [
+    {
+      "slug": "dream-motion",
+      "name": "Dream Motion",
+      "url": "https://www.framer.com/community/marketplace/templates/dream-motion/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-25T08:08:36.090429+00:00"
+    },
     {
       "slug": "lumien",
       "name": "Lumien",
