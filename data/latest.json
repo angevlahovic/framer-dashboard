@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-26T08:28:29.614507+00:00",
-  "total": 7940,
+  "scraped_at": "2026-07-27T09:54:41.584861+00:00",
+  "total": 7941,
   "templates": [
+    {
+      "slug": "verseo",
+      "name": "Verseo",
+      "url": "https://www.framer.com/community/marketplace/templates/verseo/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-27T09:54:41.502045+00:00"
+    },
     {
       "slug": "dream-motion",
       "name": "Dream Motion",
