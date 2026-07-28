@@ -1,7 +1,20 @@
 {
-  "scraped_at": "2026-07-27T09:54:41.584861+00:00",
-  "total": 7941,
+  "scraped_at": "2026-07-28T08:35:56.847334+00:00",
+  "total": 7942,
   "templates": [
+    {
+      "slug": "crevix",
+      "name": "Crevix",
+      "url": "https://www.framer.com/community/marketplace/templates/crevix/",
+      "price": "$89",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-28T08:35:56.747106+00:00"
+    },
     {
       "slug": "verseo",
       "name": "Verseo",
