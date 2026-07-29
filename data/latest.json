@@ -1,7 +1,46 @@
 {
-  "scraped_at": "2026-07-28T08:35:56.847334+00:00",
-  "total": 7942,
+  "scraped_at": "2026-07-29T08:42:52.291210+00:00",
+  "total": 7945,
   "templates": [
+    {
+      "slug": "bold-design-portfoli",
+      "name": "Bold Design Portfoli",
+      "url": "https://www.framer.com/community/marketplace/templates/bold-design-portfoli/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-29T08:42:49.718574+00:00"
+    },
+    {
+      "slug": "areal",
+      "name": "Areal",
+      "url": "https://www.framer.com/community/marketplace/templates/areal/",
+      "price": "$30",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-29T08:42:50.921523+00:00"
+    },
+    {
+      "slug": "supplier",
+      "name": "Supplier",
+      "url": "https://www.framer.com/community/marketplace/templates/supplier/",
+      "price": "$79",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-07-29T08:42:52.191465+00:00"
+    },
     {
       "slug": "crevix",
       "name": "Crevix",
