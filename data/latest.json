@@ -1,7 +1,59 @@
 {
-  "scraped_at": "2026-08-15T06:40:00.011371+00:00",
-  "total": 8125,
+  "scraped_at": "2026-08-16T06:41:47.860162+00:00",
+  "total": 8129,
   "templates": [
+    {
+      "slug": "wildedge",
+      "name": "Wildedge",
+      "url": "https://www.framer.com/community/marketplace/templates/wildedge/",
+      "price": "$149",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-16T06:41:43.511487+00:00"
+    },
+    {
+      "slug": "yoga-coach",
+      "name": "Yoga Coach",
+      "url": "https://www.framer.com/community/marketplace/templates/yoga-coach/",
+      "price": "$49",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-16T06:41:44.929580+00:00"
+    },
+    {
+      "slug": "efie",
+      "name": "Efie",
+      "url": "https://www.framer.com/community/marketplace/templates/efie/",
+      "price": "$49",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-16T06:41:46.094359+00:00"
+    },
+    {
+      "slug": "basalt-premium",
+      "name": "BASALT - Premium",
+      "url": "https://www.framer.com/community/marketplace/templates/basalt-premium/",
+      "price": "$12",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-16T06:41:47.735371+00:00"
+    },
     {
       "slug": "boldcraft",
       "name": "Boldcraft",
