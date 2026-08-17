@@ -1,7 +1,59 @@
 {
-  "scraped_at": "2026-08-16T06:41:47.860162+00:00",
-  "total": 8129,
+  "scraped_at": "2026-08-17T06:57:53.280380+00:00",
+  "total": 8133,
   "templates": [
+    {
+      "slug": "votive",
+      "name": "Votive",
+      "url": "https://www.framer.com/community/marketplace/templates/votive/",
+      "price": "$25",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-17T06:57:48.188731+00:00"
+    },
+    {
+      "slug": "meridian-architect",
+      "name": "Meridian  Architect",
+      "url": "https://www.framer.com/community/marketplace/templates/meridian-architect/",
+      "price": "$79",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-17T06:57:49.704744+00:00"
+    },
+    {
+      "slug": "ombrage",
+      "name": "Ombrage",
+      "url": "https://www.framer.com/community/marketplace/templates/ombrage/",
+      "price": "$49",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-17T06:57:51.718766+00:00"
+    },
+    {
+      "slug": "solva",
+      "name": "Solva",
+      "url": "https://www.framer.com/community/marketplace/templates/solva/",
+      "price": "$129",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-17T06:57:53.146933+00:00"
+    },
     {
       "slug": "wildedge",
       "name": "Wildedge",
