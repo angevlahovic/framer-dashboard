@@ -1,7 +1,46 @@
 {
-  "scraped_at": "2026-08-18T06:44:31.134708+00:00",
-  "total": 8143,
+  "scraped_at": "2026-08-20T06:48:16.333740+00:00",
+  "total": 8146,
   "templates": [
+    {
+      "slug": "noku",
+      "name": "Noku",
+      "url": "https://www.framer.com/community/marketplace/templates/noku/",
+      "price": "$19",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-20T06:48:13.660236+00:00"
+    },
+    {
+      "slug": "hometrix",
+      "name": "HomeTrix",
+      "url": "https://www.framer.com/community/marketplace/templates/hometrix/",
+      "price": "$29",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-20T06:48:14.887954+00:00"
+    },
+    {
+      "slug": "industrial",
+      "name": "Industrial",
+      "url": "https://www.framer.com/community/marketplace/templates/industrial/",
+      "price": "$69",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-20T06:48:16.220723+00:00"
+    },
     {
       "slug": "sentinel-co",
       "name": "Sentinel & Co",
