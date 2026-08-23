@@ -538,5 +538,14 @@
     "avg_price": 70.07,
     "total_likes": 0,
     "total_views": 0
+  },
+  {
+    "date": "2026-08-23",
+    "total": 8199,
+    "free": 8004,
+    "paid": 195,
+    "avg_price": 69.74,
+    "total_likes": 0,
+    "total_views": 0
   }
 ]
