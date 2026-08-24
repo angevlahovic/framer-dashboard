@@ -1,7 +1,59 @@
 {
-  "scraped_at": "2026-08-23T06:42:27.251041+00:00",
-  "total": 8199,
+  "scraped_at": "2026-08-24T07:00:43.714236+00:00",
+  "total": 8203,
   "templates": [
+    {
+      "slug": "aeonhealth",
+      "name": "AeonHealth",
+      "url": "https://www.framer.com/community/marketplace/templates/aeonhealth/",
+      "price": "$129",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-24T07:00:39.870791+00:00"
+    },
+    {
+      "slug": "luxsail",
+      "name": "Luxsail",
+      "url": "https://www.framer.com/community/marketplace/templates/luxsail/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-24T07:00:41.172700+00:00"
+    },
+    {
+      "slug": "foyer",
+      "name": "Foyer",
+      "url": "https://www.framer.com/community/marketplace/templates/foyer/",
+      "price": "Free",
+      "is_free": true,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-24T07:00:42.475319+00:00"
+    },
+    {
+      "slug": "summa",
+      "name": "SUMMA",
+      "url": "https://www.framer.com/community/marketplace/templates/summa/",
+      "price": "$39",
+      "is_free": false,
+      "creator": "",
+      "category": "",
+      "likes": 0,
+      "views": 0,
+      "comments": 0,
+      "scraped_at": "2026-08-24T07:00:43.598735+00:00"
+    },
     {
       "slug": "pawello",
       "name": "Pawello",
