@@ -1,14 +1,5 @@
 [
   {
-    "date": "2026-08-01",
-    "total": 7983,
-    "free": 7928,
-    "paid": 55,
-    "avg_price": 77.62,
-    "total_likes": 0,
-    "total_views": 0
-  },
-  {
     "date": "2026-08-02",
     "total": 8000,
     "free": 7935,
@@ -802,6 +793,15 @@
   },
   {
     "date": "2026-10-30",
+    "total": 8211,
+    "free": 8009,
+    "paid": 202,
+    "avg_price": 70.41,
+    "total_likes": 0,
+    "total_views": 0
+  },
+  {
+    "date": "2026-10-31",
     "total": 8211,
     "free": 8009,
     "paid": 202,
